@@ -44,6 +44,7 @@ body {
 .header {
    text-align: center;
    width: 900px;
+   padding: 20px;
    background: #b6dbf0;
    padding: 90px 0 90px 0; 
    border-top-left-radius: 20px;
