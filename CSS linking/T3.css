@@ -44,9 +44,9 @@ body {
 .header {
    text-align: center;
    width: 900px;
-   padding: 20px;
+/*    padding: 20px; */
    background: #b6dbf0;
-   padding: 90px 0 90px 0; 
+   padding: 110px 20px 110px 20px; 
    border-top-left-radius: 20px;
    border-top-right-radius: 20px;
    margin-bottom: 0; /* Remove bottom margin */
