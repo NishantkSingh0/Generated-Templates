@@ -1,266 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
 
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Designed by BRAVERS</title>
-      <link rel="icon" type="image/png" href="./Img/N.png" />
-      <style>
-        
-   body {
-      font-family: Arial, sans-serif;
-      margin: 20px 0 20px 0;
-      padding: 0;
-      background-color: #d6cece;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 1131px; /* (W/H) Ratio should be 0.7069 */
-   }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designed by BRAVERS</title>
+    <style>
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0 !important;
+                padding: 0;
+                background-color: #ffffff !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 1231px;
+                /* (W/H) Ratio should be 0.7069 */
+            }
 
-   .resume {
-      width: 800px;
-      background: #ffffff;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 0; /* Ensure no space between header and resume */
-   }
+            @page {
+                size: 930px 1200px;
+                margin: 0;
+            }
 
-   .NoDecorationBlue a{
-      text-decoration: None;
-      color: #0c6291;
-   }
+            .resume {
+                width: 900px;
+                background: #ffffff;
+                border-bottom-left-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 0;
+            }
 
-   .TextLight{
-      color: #424242;
-      font-weight: 500;
-   }
+            .header {
+                text-align: center;
+                width: auto !important;
+                background: #b6dbf0;
+                padding: 115px 20px 115px 20px;
+                border-top-left-radius: 0px !important;
+                border-top-right-radius: 0px !important;
+                margin-bottom: 0;
+            }
+        }
 
-   .IconLight{
-      color: #4e4e4e;
-   }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 100px 0 20px 0;
+            padding: 0;
+            background-color: #d6cece;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 1231px;
+            /* (W/H) Ratio should be 0.7069 */
+        }
 
-   .header {
-      text-align: center;
-      width: 840px;
-      background: #b6dbf0;
-      padding: 90px 0 90px 0; 
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      margin-bottom: 0; /* Remove bottom margin */
-   }
+        .resume {
+            width: 900px;
+            background: #ffffff;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 0;
+            /* Ensure no space between header and resume */
+        }
 
-   .header h1 {
-      margin: 0;
-      font-size: 40px;
-      color: #333;
-   }
+        .NoDecorationBlue a {
+            text-decoration: None;
+            color: #0c6291;
+        }
 
-   .header h2 {
-      margin: 5px 0 0;
-      font-size: 18px;
-      color: #555;
-   }
+        .TextLight {
+            color: #424242;
+            ;
+            font-weight: 500;
+        }
 
-   .section, .SUsection {
-      margin-bottom: 20px;
-   }
+        .IconLight {
+            color: #4e4e4e;
+        }
 
-   .section-title {
-      font-size: 18px;
-      color: #0073b1;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #96a75a;
-      padding-bottom: 5px;
-   }
+        .header {
+            text-align: center;
+            width: 900px;
+            background: #b6dbf0;
+            padding: 115px 20px 115px 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-bottom: 0;
+            /* Remove bottom margin */
+        }
 
-   .content {
-      display: flex;
-      justify-content: center;
-   }
+        .header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+        }
 
-   .content .left {
-      width: 30%;
-      padding-right: 10px;
-      border-right: 4px solid rgb(109, 106, 106);
-      border-radius: 2px;
-   }
+        .header h2 {
+            margin: 5px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
 
-   .content .right {
-      width: 60%;
-      margin-left: 10px;
-   }
+        .section,
+        .SUsection {
+            margin-bottom: 20px;
+        }
 
-   .content .left .section-title,.content .right .item-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
+        .section-title {
+            font-size: 18px;
+            color: #0073b1;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #96a75a;
+            padding-bottom: 5px;
+        }
 
-   .content .right .item-title {
-      font-weight: bold;
-   }
+        .content {
+            display: flex;
+            justify-content: center;
+        }
 
-   .Contact div {
-      margin-bottom: 5px;
-   }
+        .mbb-3 {
+            margin-bottom: 0.75rem
+                /* 12px */
+            ;
+        }
 
-   .content .Contact div a {
-      text-decoration: none;
-      color: #000000;
-   }
+        .mb-2 {
+            margin-bottom: 0.5rem
+                /* 8px */
+            ;
+        }
 
-   .subcont,.SkillSubCon {
-      display: flex;
-      justify-content: space-between;
-   }
+        .content .left {
+            width: 35%;
+            padding-right: 10px;
+            border-right: 4px solid rgb(109, 106, 106);
+            border-radius: 2px;
+        }
 
-   .item {
-      margin-bottom: 10px;
-   }
+        .content .right {
+            width: 60%;
+            margin-left: 10px;
+        }
 
-   ul {
-      padding-left: 20px;
-      margin: 5px 0;
-   }
+        .content .left .section-title,
+        .content .right .item-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-   ul li {
-      margin-bottom: 5px;
-   }
+        .content .right .item-title {
+            font-weight: bold;
+        }
 
-   .rotate-90 { 
-      transform: rotate(90deg); /* Rotates the icon 90 degrees */ 
-   }
-   
-      </style>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        .Contact div {
+            margin-bottom: 5px;
+        }
 
-   </head>
-   <body>
-      <div class="header">
-         <h1>Nishant kumar</h1>
-         <h2>Data Scientist</h2>
-      </div>
-      <div class="resume">
-            <div class="content">
-               <div class="left">
-                  <div class="Contact"> 
-                     <div class="section-title"><b>Contact</b> <i class="fas fa-address-card"></i></div><br>
-                     <div class="Litem"><i class="fa fa-phone rotate-90 IconLight"></i> 9217290469 </div>
-                     <div class="Litem"><i class="fas fa-envelope IconLight"></i><a href="mailto:"+nishantsingh.talk@gmail.com> nishantsingh.talk </a></div>
-                     <div class="Litem"><i class="fab fa-linkedin IconLight"></i><a href=https://www.linkedin.com/in/nishantksingh1 target="_blank"> nishantksingh1</a></div>
-                     <div class="Litem"><i class="fas fa-globe IconLight"></i><a href=https://github.com/nishantksingh0.github.io target="_blank"> nishantksingh0.github.io </a></div>
-                     <div class="Litem"><i class="fa fa-map-marker IconLight"></i> Haridwar (Uttrakhand)</div> <br>
-                  </div>
+        .content .Contact div a {
+            text-decoration: none;
+            color: #000000;
+        }
 
-                  <div class="section">
-                     <div class="section-title"><b>Education </b><i class="fas fa-graduation-cap"></i></div><br>
-                     <div class="Litem">         
-                        <div class="SubSec-title TextLight"><b>2023 - 2026<br>Haridwar University</b></div>
-                        Batchelor in Computer application <br>
-                        GPA: 8
-                        <br>
-                        <br> 
-                        <div class="SubSec-title TextLight"><b>2021 - 2023<br>Vidya Mandir Sec-5 (Haridwar)</b></div>
-                        Primary/Secondary <br>
-                        GPA: 8
-                        <br>
-                     </div>
-                  </div>
+        .subcont,
+        .SkillSubCon {
+            display: flex;
+            justify-content: space-between;
+        }
 
-                  <div class="section">
-                     <div class="section-title"><b>Soft Skills </b><i class="fa fa-book"></i></div><br>
-                     <ul>
-                        <li>TeamWork</li>
-                        <li>Problem-Solving</li>
-                        <li>Leadership</li>
-                        <li>Critical</li>
-                        <li>Communication</li>
-                     </ul>
-                  </div>
+        .item {
+            margin-bottom: 10px;
+        }
 
-                  <div class="section">
-                     <div class="section-title"><b>Languages </b><i class="fa fa-language"></i></div><br>
-                     <ul>
-                        <li>English: Fluet</li>
-                        <li>Hindi: Fluet</li>
-                        <li>French: Fluet</li>
-                     </ul>
-                  </div>
-               </div>
+        ul {
+            list-style: square;
+            padding-left: 20px;
+            margin: 5px 0;
+        }
 
-               <div class="right">
-                  <div class="section">
-                     <div class="section-title"><b>Profile Summary</b></div>
-                     <p>
-                        A passionated AI developer with extensive experience in various machine learning models, Primarily i focus on building models from scratch rather than relying heavily on fine-tuning pre-trained models. All my projects, showcasing my skills and contributions, are available on GitHub & Kaggle.
-                     </p>
-                  </div>
+        ul li {
+            margin-bottom: 5px;
+        }
 
-                  <div class="SUsection">
-                     <div class="section-title"><b>Projects</b></div>
-                     <ul>
-                        <div class="Ritem">
-                              <li> <div class="item-title TextLight">Transformer based translation model </div>
-                              <div> Tensorflow, Trasformer architecture, NumPy, WMT Translation dataset </li>
-                        </div>
-                     
-                        <div class="Ritem">
-                              <li> <div class="item-title TextLight">Exam Proctoring system </div>
-                              <div> React, Flask, OpenCV, NumPy, Mediapipe, Pillow, WebSocket, ThreadPool </li>
-                        </div>
-                     
-                        <div class="Ritem">
-                              <li> <div class="item-title TextLight">Persion bounding box detection </div>
-                              <div> OpenCV, Json, Tensorflow, Pandas, Matplotlib, NumPy </li>
-                        </div>
-                     </ul>
-                  </div>
+        .rotate-90 {
+            transform: rotate(90deg);
+            /* Rotates the icon 90 degrees */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/NishantkSingh0/Resume-Builder/main/public/N.png">
+</head>
 
-                  <div class="section">
-                     <div class="section-title"><b>Work Experience</b></div>
-                     <div class="Ritem">
-                        <ul>
-                           <li> <div class="item-title TextLight">Onlei tech<div>Dec-2024 to Mar-2025</div> </div>
-                           Data scientist<br>
-                           Learn to visualize patterns from data using matplotlib and Built several DL models</li><br>
-                           
-                           <li> <div class="item-title TextLight">Microsoft<div>May-2024 to Jul-2024</div> </div>
-                           Python engineer<br>
-                           Learn to use python in NLP tasks to take advantages of LLM</li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="section">
-                     <div class="section-title"><b>Certificates</b></div>
-                     <div class="Ritem subcont NoDecorationBlue">
-                        <div>Azure AI Engineer association<br>C/C++<br>DataScientist Internship<br>Intro To responsive AI<br>Bits & byts of computer<br><a href="#" target="_blank">More Certificates</a></div>
-                        <div>~<br>~<br>~<br>~<br>~<br></div>
-                        <div>Microsoft<br>Cad Planet<br>Onlei Tech<br>SimpliLearn<br>Coursera<br></div>
-                     </div>
-                  </div>
-
-                  <div class="skills">
-                     <div class="section-title"><b>Technical Skills</b></div>
-                     <div class="Ritem subcont">
-                     <ul>
-                        <li>TensorFlow</li> <br> <li> PyTorch</li> <br> <li> Scikit-learn</li>
-                     </ul>
-                     <ul>
-                        <li> Keras</li> <br> <li> Hugging Face</li> <br> <li> C/C++</li>
-                     </ul>
-                     <ul>
-                        <li> Java</li> <br> <li> JavaScript</li> <br> <li> React</li>
-                     </ul>
-                     </div>
-                  </div>
-               </div>
+<body>
+    <div class="sc-fLDLck Uyzkz">
+        <div id="capture-content">
+            <div class="header">
+                <h1>Ankush Kumar</h1>
+                <h2>Frontend developer</h2>
             </div>
-      </div>
-   </body>
-   </html>
-   
+            <div class="resume">
+                <div class="content">
+                    <div class="left">
+                        <div class="Contact">
+                            <div class="section-title"><b>Contact</b> <i class="fas fa-address-card" aria-hidden="true"></i></div><br>
+                            <div class="Litem"><i class="fa fa-phone IconLight" aria-hidden="true"></i> 7369729046 </div>
+                            <div class="Litem"><i class="fas fa-envelope IconLight" aria-hidden="true"></i><a href="mailto:Ankush.talk@gmail.com"> Ankush.talk </a></div>
+                            <div class="Litem"><i class="fab fa-linkedin IconLight" aria-hidden="true"></i><a href="https://www.linkedin.com/in/AnkushKumar23" target="_blank" rel="noreferrer"> AnkushKumar23</a></div>
+                            <div class="Litem"><i class="fas fa-globe IconLight" aria-hidden="true"></i><a href="https://github.com/Ankush-546" target="_blank" rel="noreferrer"> Ankush-546 </a></div>
+                            <div class="Litem"><i class="fa fa-map-marker IconLight" aria-hidden="true"></i> Haridwar (Uttrakhand)</div> <br>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><b>Education </b><i class="fas fa-graduation-cap" aria-hidden="true"></i></div><br>
+                            <div class="Litem">
+                                <div class="mbb-3">
+                                    <div class="SubSec-title TextLight"><b>2023 - 2026<br>Haridwar University</b></div>Batchelor in Computer application <br>GPA: 8<br>
+                                </div>
+                                <div class="mbb-3">
+                                    <div class="SubSec-title TextLight"><b>2021 - 2023<br>Hariom Sisu Vidya Mandir dhanouri (Haridwar)</b></div>Primary/Secondary <br>GPA: 8
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><b>Soft Skills </b><i class="fa fa-book" aria-hidden="true"></i></div><br>
+                            <ul>
+                                <li>TeamWork</li>
+                                <li>Critical thinking</li>
+                                <li>Problem-Solving</li>
+                                <li>Creativity</li>
+                                <li>Leadership</li>
+                                <li>Communication</li>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><b>Languages </b><i class="fa fa-language" aria-hidden="true"></i></div><br>
+                            <ul>
+                                <li>English: Fluent</li>
+                                <li>Hindi: Fluent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="section">
+                            <div class="section-title"><b>Profile Summary</b></div>
+                            <p>An enthusiastic Full Stack Developer from Haridwar University with a proven track record in Web3.js, Flask, Firebase, Swift, Terraform, C/C++, Docker, JavaScript, React and more. across 18+ industry-relevant projects. Skilled communicator in Hindi English with a reputation for TeamWork, Critical thinking, Problem-Solving, Creativity, Leadership, Communication, problem-solving, and strategic thinking.</p>
+                        </div>
+                        <div class="SUsection">
+                            <div class="section-title"><b>Projects</b></div>
+                            <ul>
+                                <div class="Ritem">
+                                    <li>
+                                        <div class="item-title TextLight">Online shopping application </div>
+                                        <div> HTML/CSS, React, Node.js, Web3.js, JavaScript </div>
+                                    </li>
+                                </div>
+                                <div class="Ritem">
+                                    <li>
+                                        <div class="item-title TextLight">Library management system </div>
+                                        <div> React, Flask, Stacks, NumPy, HTTPS protocol, ThreadPool </div>
+                                    </li>
+                                </div>
+                                <div class="Ritem">
+                                    <li>
+                                        <div class="item-title TextLight">Online exam proctoring system </div>
+                                        <div> OpenCV, Json, Tensorflow, Pandas, Matplotlib, Mediapipe, ThreadPool, NumPy </div>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><b>Work Experience</b></div>
+                            <div class="Ritem">
+                                <ul>
+                                    <li class="mbb-2">
+                                        <div class="item-title TextLight">Onlei tech<div>Dec-2024 to Mar-2025</div>
+                                        </div>Data scientist<br>Learn to visualize patterns from data using matplotlib and Built several DL models<br>
+                                    </li>
+                                    <li class="mbb-2">
+                                        <div class="item-title TextLight">Microsoft<div>May-2024 to Jul-2024</div>
+                                        </div>WebEngage<br>Enhanced designing capability and learned to design user freindly interfaces
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section-title"><b>Certificates</b></div>
+                            <div class="Ritem subcont NoDecorationBlue">
+                                <div>Azure AI Engineer association<br>C/C++<br>DataScientist Internship<br>Intro To responsive AI<br>Bits &amp; byts of computer<br><a href="#" target="_blank" rel="noreferrer">More Certificates</a></div>
+                                <div>--<br>--<br>--<br>--<br>--<br></div>
+                                <div>Microsoft<br>Cad Planet<br>Onlei Tech<br>SimpliLearn<br>Coursera<br></div>
+                                <div class="TextLight">(2 month )<br>(2 Month)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br></div>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <div class="section-title"><b>Technical Skills</b></div>
+                            <div class="Ritem subcont">
+                                <ul>
+                                    <li>Web3.js</li>
+                                    <li>Flask</li>
+                                    <li>Firebase</li>
+                                </ul>
+                                <ul>
+                                    <li>Swift</li>
+                                    <li>Terraform</li>
+                                </ul>
+                                <ul>
+                                    <li>C/C++</li>
+                                    <li>Docker</li>
+                                </ul>
+                                <ul>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
