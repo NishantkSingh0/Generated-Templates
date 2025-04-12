@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Designed by BRAVERS</title>
-      <link rel="icon" type="image/png" href="./Img/N.png" />
-      <style>
-         body {
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designed by BRAVERS</title>
+    <style>
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #ffffff !important;
+                display: flex;
+                justify-content: center;
+                align-items: stretch !important;
+                height: 100% !important;
+            }
+
+            @page {
+                size: auto 1220px;
+                margin: 0;
+            }
+
+            .resume {
+                width: 900px;
+                background: #ffffff;
+                border: 1px solid #ffffff !important;
+                border-radius: 15px;
+                margin-top: 0px !important;
+                padding: 0 32px 0 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -14,37 +42,39 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* height: 1140px; (W/H) Ratio should be 0.7069 */
-            }
-      
-         .resume {
-            width: 800px; /* (W/H) Ratio should be 0.7069 */
-            /* max-height: 1200px; */
+            height: 1380px;
+            /* (W/H) Ratio should be 0.7069 */
+        }
+
+        .resume {
+            width: 900px;
+            /* (W/H) Ratio should be 0.7069 */
             background: #ffffff;
             border: 1px solid #ddd;
             border-radius: 15px;
-            margin-top: 20px;
+            margin-top: 100px;
             padding: 0 30px 0 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-      
-         .Underline{
-            width: 60px;
-            border:2px solid black;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .Underline {
+            width: 75px;
+            border: 2px solid black;
+            margin-top: 10px;
             border-radius: 20px;
-            }
-      
-         .NoneDecoration a{
+        }
+
+        .NoneDecoration a {
             text-decoration: none;
-            color:#0363b1;
-            }
-      
-         .header {
-            display: flex; 
+            color: #0363b1;
+        }
+
+        .header {
+            display: flex;
             align-items: center;
-            }
-      
-         .header .left {
+        }
+
+        .header .left {
             width: 35%;
             display: flex;
             justify-content: center;
@@ -52,281 +82,295 @@
             background-color: #0363b1;
             border-top-left-radius: 15px;
             border-right: 4px solid #0363b1;
-            }
-      
-         .left img{
+        }
+
+        .left img {
             width: 200px;
             height: 200px;
             background-color: #4c4fda;
             border-radius: 50%;
             object-fit: cover;
-            }
-      
-         .header .right {
+        }
+
+        .header .right {
             width: 65%;
             justify-content: center;
             align-items: center;
             height: 100%;
             margin-right: 40px;
-            }
-      
-         .header .right .head {
+        }
+
+        .header .right .head {
             padding-left: 40px;
-            }
-      
-         .right h1 {
+        }
+
+        .textGray {
+            color: #4e4e53;
+        }
+
+        .right h1 {
             font-size: 40px;
             margin-bottom: 5px;
-            }
-      
-         .right h2 {
+        }
+
+        .right h2 {
             font-size: 16px;
             color: #4d4b4b;
-            }
-      
-         .section-title {
+        }
+
+        .section-title {
             font-size: 18px;
             color: #3e3e3f;
             margin-bottom: 10px;
             border-bottom: 1px solid #96a75a;
             padding-bottom: 5px;
-            }
-      
-         .SkillsSection-title {
+        }
+
+        .SkillsSection-title {
             font-size: 18px;
             color: #3e3e3f;
             border-bottom: 1px solid #96a75a;
-            }
-      
-         .Lsection-title {
+        }
+
+        .Lsection-title {
             font-size: 18px;
             color: #f5f5f5;
             margin-bottom: 10px;
             border-bottom: 1px solid #d4d4d2;
             padding-bottom: 5px;
-            }
-      
-         .content {
+        }
+
+        .content {
             display: flex;
             justify-content: center;
-            }
-      
-         .content .left {
+        }
+
+        .mtt-3 {
+            margin-top: 0.75rem
+                /* 12px */
+            ;
+        }
+
+        .content .left {
             width: 35%;
             padding-right: 10px;
             background-color: #0363b1;
             border-bottom-left-radius: 15px;
             border-right: 4px solid #0363b1;
-            }
-      
-         .content .right {
+            /* border-top: 4px solid #0363b1; */
+        }
+
+        .content .right {
             width: 65%;
             margin-left: 10px;
-            }
-      
-         .Lsection,.Contact {
+        }
+
+        .Lsection,
+        .Contact {
             margin-bottom: 20px;
             padding-left: 20px;
             color: #e1ebf3;
-            }
-      
-         .Contact div {
+        }
+
+        .Contact div {
             margin-bottom: 5px;
-            }
-      
-         .content .Contact div a {
+        }
+
+        .content .Contact div a {
             text-decoration: none;
             color: #e1ebf3;
-            }
-      
-         .subcont,.SkillSubCon {
-             display: flex;
-             justify-content: space-between;
-            }  
-      
-         .section,.SUsection {
+        }
+
+        .subcont,
+        .SkillSubCon {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section,
+        .SUsection {
             margin-bottom: 20px;
             color: #141414;
-            }
-      
-         .item {
+        }
+
+        .item {
             margin-bottom: 10px;
-            }
-      
-         .item-title {
+        }
+
+        .item-title {
             font-weight: bold;
-            }
-      
-         .content .right .item-title,
-         .content .left .section-title,
-         .Lsection-title {
+        }
+
+        .content .right .item-title,
+        .content .left .section-title,
+        .Lsection-title {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            }
-      
-         ul {
+        }
+
+        ul {
+            list-style-type: circle;
             padding-left: 20px;
             margin: 5px 0;
-            }
-      
-         ul li {
+        }
+
+        ul li {
             margin-bottom: 5px;
-            }
-      
-         .rotate-90 {
+        }
+
+        .textLight {
+            font-weight: 500;
+            color: #626263;
+        }
+
+        .rotate-90 {
             transform: rotate(90deg);
-            }
-      
-         .content .right .section .Cont {
-            border-left: 2px solid #434e58;
+        }
+
+        .content .right .section .Cont {
+            border-left: 2px solid #53677a;
             margin-left: 5px;
-            }
-      
-         .textGray{
-            color: #4e4e53;
-            }
-      
-         .content .right .section .Cont .item {
+        }
+
+        .content .right .section .Cont .item {
             margin-left: 10px;
-         }
-      </style>
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/NishantkSingh0/Resume-Builder/main/public/N.png">
+</head>
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-   </head>
-   <body>
-      <div class="resume">
+<body>
+    <div class="sc-dycHyt fNOEuN">
+        <div class="resume" id="capture-content">
             <div class="header">
-               <div class="left">
-                  <img src="Profile.jpg" alt="Profile">
-               </div>
-
-               <div class="right">
-                  <div class="head">
-                     <h1>Nishant kumar</h1>
-                     <h2>Data Scientist</h2>
-                     <div class="Underline"></div>
-                  </div>
-               </div>
+                <div class="left"><img src="https://www.skibalawchicago.com/wp-content/uploads/2024/06/profile-placeholder.jpg" alt="Profile"></div>
+                <div class="right">
+                    <div class="head">
+                        <h1>Nishant kumar</h1>
+                        <h2>Data Scientist</h2>
+                        <div class="Underline"></div>
+                    </div>
+                </div>
             </div>
-
             <div class="content">
-               <div class="left">
-                  <div class="Contact"> 
-                     <div class="Lsection-title"><b>Contact</b> <i class="fas fa-address-card"></i></div><br>
-                     <div class="Litem"><i class="fa fa-phone rotate-90"></i> 9217290469 </div>
-                     <div class="Litem"><i class="fas fa-envelope"></i><a href="mailto:"+nishantsingh.talk@gmail.com> nishantsingh.talk </a></div>
-                     <div class="Litem"><i class="fab fa-linkedin"></i><a href=https://www.linkedin.com/in/nishantksingh1 target="_blank"> nishantksingh1</a></div>
-                     <div class="Litem"><i class="fas fa-globe"></i><a href=https://github.com/nishantksingh0.github.io target="_blank"> nishantksingh0.github.io </a></div>
-                     <div class="Litem"><i class="fa fa-map-marker"></i> Haridwar (Uttrakhand)</div> 
-                  </div>
-
-                  <div class="Lsection">
-                     <div class="Lsection-title"><b>Education </b><i class="fas fa-graduation-cap"></i></div><br>
-                     <div class="Litem">
-                        <div class="SubSec-title"><b>2023 - 2026<br>Haridwar University</b></div>
-                        Batchelor in Computer application <br>
-                        SGPA: 8
-                        <br> 
-                        <br>
-                        <div class="SubSec-title"><b>2021 - 2023<br>Vidya Mandir Sec-5 (Haridwar)</b></div>
-                        Primary/Secondary <br>
-                        SGPA: 8
-                        <br>
-                     </div>
-                  </div>
-
-                  <div class="Lsection">
-                     <div class="Lsection-title"><b>Soft Skills </b><i class="fa fa-book"></i></div><br>
-                     <ul>
-                        <li>TeamWork</li>
-                        <li>Problem-Solving</li>
-                        <li>Leadership</li>
-                        <li>Critical</li>
-                        <li>Communication</li>
-                        <br>
-                     </ul>
-                  </div>
-
-                  <div class="Lsection">
-                     <div class="Lsection-title"><b>Languages </b><i class="fa fa-language"></i></div><br>
-                     <ul>
-                        <li>English: Fluet</li>
-                        <li>Hindi: Fluet</li>
-                        <li>French: Fluet</li>
-                     </ul>
-                  </div>
-               </div>
-
-               <div class="right">
-                  <div class="section">
-                     <div class="section-title"><b>Profile Summary</b></div>
-                     <p>
-                        A passionated AI developer with extensive experience in various machine learning models, Primarily i focus on building models from scratch rather than relying heavily on fine-tuning pre-trained models. All my projects, showcasing my skills and contributions, are available on GitHub & Kaggle.
-                     </p>
-                  </div>
-                  <div class="SUsection">
-                     <div class="section-title"><b>Projects</b></div>
-                     <ul>
-                        <div class="Ritem">
-                              <li> <div class="item-title textGray">Transformer based translation model </div>
-                              <div> Tensorflow, Trasformer architecture, NumPy, WMT Translation dataset </li>
+                <div class="left">
+                    <div class="Contact">
+                        <div class="Lsection-title"><b>Contact</b> <i class="fas fa-address-card" aria-hidden="true"></i></div> <br>
+                        <div class="Litem"><i class="fa fa-phone" aria-hidden="true"></i> 9217290469 </div>
+                        <div class="Litem"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:nishantsingh.talk@gmail.com"> nishantsingh.talk </a></div>
+                        <div class="Litem"><i class="fab fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/nishantksingh1" target="_blank" rel="noreferrer"> nishantksingh1</a></div>
+                        <div class="Litem"><i class="fas fa-globe" aria-hidden="true"></i><a href="https://github.com/nishantksingh0.github.io" target="_blank" rel="noreferrer"> nishantksingh0.github.io </a></div>
+                        <div class="Litem"><i class="fa fa-map-marker" aria-hidden="true"></i> Haridwar (Uttrakhand)</div>
+                    </div>
+                    <div class="Lsection">
+                        <div class="Lsection-title"><b>Education </b><i class="fas fa-graduation-cap" aria-hidden="true"></i></div><br>
+                        <div class="Litem">
+                            <div class="SubSec-title"><b>2023 - 2026<br>Haridwar University</b></div>Batchelor in Computer application <br>SGPA: 8<br><br>
+                            <div class="SubSec-title"><b>2021 - 2023<br>Vidya Mandir Sec-5 (Haridwar)</b></div>Primary/Secondary <br>SGPA: 8<br>
                         </div>
-                     
+                    </div>
+                    <div class="Lsection">
+                        <div class="Lsection-title"><b>Soft Skills </b><i class="fa fa-book" aria-hidden="true"></i></div><br>
+                        <ul>
+                            <li>TeamWork</li>
+                            <li>Problem-Solving</li>
+                            <li>Leadership</li>
+                            <li>Critical thinking</li>
+                            <li>Communication</li>
+                            <li>Creativity</li>
+                        </ul>
+                    </div>
+                    <div class="Lsection">
+                        <div class="Lsection-title"><b>Languages </b><i class="fa fa-language" aria-hidden="true"></i></div><br>
+                        <ul>
+                            <li>English: Fluent</li>
+                            <li>Hindi: Fluent</li>
+                            <li>French: Fluent</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="section">
+                        <div class="section-title"><b>Profile Summary</b></div>
+                        <p>Passionate AI developer &amp; backend specialist with expertise in deep learning, computer vision, NLP, and transformers, focusing on building models from scratch. Proficient in React, frontend design, Flask, and Django, enabling seamless AI integration into real world applications. Developed and deployed 22+ projects, showcased on GitHub &amp; Kaggle. Always eager to solve complex challenges and innovate in AI &amp; software development</p>
+                    </div>
+                    <div class="SUsection">
+                        <div class="section-title"><b>Projects</b></div>
+                        <ul>
+                            <div class="Ritem" style="margin-bottom: 15px;">
+                                <li>
+                                    <div class="item-title textGray">Transformer based translation model </div>
+                                    <div> Tensorflow, Trasformer architecture, NumPy, WMT Translation dataset </div>
+                                </li>
+                            </div>
+                            <div class="Ritem" style="margin-bottom: 15px;">
+                                <li>
+                                    <div class="item-title textGray">Exam Proctoring system </div>
+                                    <div> React, Flask, OpenCV, NumPy, Mediapipe, Pillow, WebSocket, ThreadPool </div>
+                                </li>
+                            </div>
+                            <div class="Ritem" style="margin-bottom: 0px;">
+                                <li>
+                                    <div class="item-title textGray">Persion bounding box detection </div>
+                                    <div> OpenCV, Json, Tensorflow, Pandas, Matplotlib, NumPy </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div><br>
+                    <div class="section">
+                        <div class="section-title"><b>Work Experience</b></div>
                         <div class="Ritem">
-                              <li> <div class="item-title textGray">Exam Proctoring system </div>
-                              <div> React, Flask, OpenCV, NumPy, Mediapipe, Pillow, WebSocket, ThreadPool </li>
+                            <ul>
+                                <li>
+                                    <div class="item-title textGray mtt-3">Onlei tech<div>Dec-2024 to Mar-2025</div>
+                                    </div>Data scientist<br>
+                                    <div>Learn to visualize patterns from data using matplotlib and Built several DL models</div>
+                                </li>
+                                <li>
+                                    <div class="item-title textGray mtt-3">Microsoft<div>May-2024 to Jul-2024</div>
+                                    </div>Python engineer<br>
+                                    <div>Learn to use python in NLP tasks to take advantages of LLM</div>
+                                </li>
+                            </ul>
                         </div>
-                     
-                        <div class="Ritem">
-                              <li> <div class="item-title textGray">Persion bounding box detection </div>
-                              <div> OpenCV, Json, Tensorflow, Pandas, Matplotlib, NumPy </li>
+                    </div>
+                    <div class="section">
+                        <div class="section-title"><b>Certificates</b></div>
+                        <div class="Ritem subcont NoneDecoration">
+                            <div>Azure AI Engineer association<br>C/C++<br>DataScientist Internship<br>Intro To responsive AI<br>Bits &amp; byts of computer<br><a href="#" target="_blank" rel="noreferrer">More Certificates</a></div>
+                            <div>--<br>--<br>--<br>--<br>--<br></div>
+                            <div>Microsoft<br>Cad Planet<br>Onlei Tech<br>SimpliLearn<br>Coursera<br></div>
+                            <div class="textLight">(2 month )<br>(2 Month)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br></div>
                         </div>
-                     </ul>
-                  </div>
-                  <br>
-                  <div class="section">
-                     <div class="section-title"><b>Work Experience</b></div>
-                     <div class="Ritem">
-                        <ul>        
-                           <li> <div class="item-title textGray">Onlei tech<div>Dec-2024 to Mar-2025</div> </div>
-                           Data scientist<br>
-                           Learn to visualize patterns from data using matplotlib and Built several DL models</li><br>
-                           
-                           <li> <div class="item-title textGray">Microsoft<div>May-2024 to Jul-2024</div> </div>
-                           Python engineer<br>
-                           Learn to use python in NLP tasks to take advantages of LLM</li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="section">
-                     <div class="section-title"><b>Certificates</b></div>
-                     <div class="Ritem subcont NoneDecoration">
-                        <div>Azure AI Engineer association<br>C/C++<br>DataScientist Internship<br>Intro To responsive AI<br>Bits & byts of computer<br><a href="#" target="_blank">More Certificates</a></div>
-                        <div>~<br>~<br>~<br>~<br>~<br></div>
-                        <div>Microsoft<br>Cad Planet<br>Onlei Tech<br>SimpliLearn<br>Coursera<br></div>
-                     </div>
-                  </div>
-
-                  <div class="skills">
-                     <div class="SkillsSection-title"><b>Technical Skills</b></div><br>
-                     <div class="Ritem subcont">
-                        <ul>
-                           <li>TensorFlow</li> <br> <li> PyTorch</li> <br> <li> Scikit-learn</li>
-                        </ul>
-                        <ul>
-                           <li> Keras</li> <br> <li> Hugging Face</li> <br> <li> C/C++</li>
-                        </ul>
-                        <ul>
-                           <li> Java</li> <br> <li> JavaScript</li> <br> <li> React</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                    <div class="skills">
+                        <div class="SkillsSection-title"><b>Technical Skills</b></div><br>
+                        <div class="Ritem subcont">
+                            <ul>
+                                <li>TensorFlow</li>
+                                <li>PyTorch</li>
+                                <li>Scikit-learn</li>
+                            </ul>
+                            <ul>
+                                <li>Keras</li>
+                                <li>Hugging Face</li>
+                            </ul>
+                            <ul>
+                                <li>C/C++</li>
+                                <li>Java</li>
+                            </ul>
+                            <ul>
+                                <li>C/C++</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-      </div>
-   </body>
-   </html>
-   
+        </div>
+    </div>
+</body>
+
+</html>
