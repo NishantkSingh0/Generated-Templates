@@ -1,232 +1,287 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-     <meta charset="UTF-8" />
-     <title>Designed by BRAVERS</title>
-     <link rel="icon" href="https://raw.githubusercontent.com/NishantkSingh0/Resume-Builder/main/public/N.png">
+<html lang="en">
 
-     <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designed by BRAVERS</title>
+    <style>
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                background: #fff !important;
+                margin-top: 0 !important;
+                color: #333;
+                padding: 5px !important;
+            }
+
+            @page {
+                size: 960px 1300px;
+                margin: 0;
+            }
+
+            .resume-container {
+                width: 900px;
+                margin: 10px auto;
+                background: #fff;
+                border-radius: 15px;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.05);
+                padding: 1rem !important;
+            }
+        }
+
         * {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-   }
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-   body {
-     font-family: Arial, sans-serif;
-     background: #c9c9c9;
-     margin-top: 80px;
-     color: #333;
-     padding: 20px;
-   }
+        body {
+            font-family: Arial, sans-serif;
+            background: #c9c9c9;
+            margin-top: 80px;
+            color: #333;
+            padding: 20px;
+        }
 
-   .resume-container {
-     max-width: 800px;
-     max-height: 1200px;
-     margin: 0 auto;
-     background: #fff;
-     border-radius: 15px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-     padding: 2rem;
-   }
+        .resume-container {
+            width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+        }
 
-   .header {
-     text-align: center;
-     margin-bottom: 1.5rem;
-   }
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
 
-   .header h1 {
-     font-size: 2rem;
-     letter-spacing: 1px;
-     margin-bottom: 0.25rem;
-     color: #7d3c98; 
-     text-transform: uppercase;
-   }
+        .header h1 {
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+            color: #7d3c98;
+            text-transform: uppercase;
+        }
 
-   .header h2 {
-     font-size: 1.2rem;
-     font-weight: normal;
-     color: #555;
-     margin-bottom: 0.75rem;
-   }
+        .header h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 0.75rem;
+        }
 
-   .header p {
-     font-size: 0.9rem;
-     color: #666;
-   }
+        .header p {
+            font-size: 0.9rem;
+            color: #666;
+        }
 
-   h3 {
-     font-size: 1rem;
-     text-transform: uppercase;
-     color: #7d3c98;
-     margin-top: 1.5rem;
-     margin-bottom: 0.75rem;
-     letter-spacing: 1px;
-   }
+        h3 {
+            font-size: 19px;
+            text-transform: uppercase;
+            color: #7d3c98;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 1px;
+        }
 
-   .spacebetween {
-     display: flex;
-     justify-content: space-between;
-   }
+        .spacebetween {
+            display: flex;
+            justify-content: space-between;
+        }
 
-   .summary, .projects, .experience, .education-section, .Certifications, .skills {
-     border-top: 2px solid #333;
-     margin-bottom: 25px;
-   }
+        .flexConts {
+            display: flex;
+        }
 
-   .summary p {
-     line-height: 1.5;
-     margin-bottom: 0.5rem;
-     margin-left: 10px;
-     margin-right: 10px;
-   }
+        .mar-30 {
+            margin: 0 30px 0 30px;
+        }
 
-   .project-item {
-     margin: 0 25px 10px 25px;
-   }
+        .summary,
+        .projects,
+        .experience,
+        .education-section,
+        .Certifications,
+        .skills {
+            border-top: 2px solid #333;
+            margin-bottom: 25px;
+        }
 
-   .experience-item {
-     margin-bottom: 1rem;
-     margin-right: 20px;
-   }
+        .summary p {
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
 
-   .experience-item h4 {
-     font-size: 1rem;
-     margin-bottom: 0.25rem;
-     font-weight: bold;
-   }
+        .project-item {
+            margin: 0 25px 10px 25px;
+        }
 
-   .experience-item span {
-     font-size: 0.9rem;
-     color: #757474;
-   }
+        .experience-item {
+            margin-bottom: 1rem;
+            margin-right: 20px;
+        }
 
-   .experience-item ul {
-     list-style: circle;
-     margin-left: 1.2rem;
-     margin-top: 0.5rem;
-   }
+        .experience-item h4 {
+            font-size: 16px;
+            margin-bottom: 0.25rem;
+            font-weight: bold;
+        }
 
-   .experience-item li {
-     margin-bottom: 0.5rem;
-   }
+        .experience-item span {
+            font-size: 0.9rem;
+            color: #757474;
+        }
 
-   .education-item {
-     margin: 0 20px 10px 20px;
-   }
+        .experience-item ul {
+            list-style: circle;
+            margin-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
 
-   .education-item h4 {
-     font-size: 1rem;
-     margin-bottom: 0.25rem;
-     font-weight: bold;
-   }
+        .experience-item li {
+            margin-bottom: 0.5rem;
+        }
 
-   .education-item span {
-     font-size: 0.9rem;
-     color: #757474;
-   }
+        .education-item {
+            margin: 0 20px 10px 20px;
+        }
 
-   .Certificate-item {
-     margin: 0 10px 0 10px;
-   }
+        .education-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-weight: bold;
+        }
 
-   .skills-item {
-     margin-bottom: 5px;
-     margin-left: 10px;
-   }
+        .education-item span {
+            font-size: 0.9rem;
+            color: #757474;
+        }
 
-   .DecorationNone {
-     text-decoration: none;
-     color: #1d4780;
-   }
+        .Certificate-item {
+            margin: 0 10px 0 10px;
+        }
 
-   .square-list {
-     list-style-type: square; 
-   }
-     </style>
-   </head>
-   <body>
+        .skills-item {
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
 
-   <div class="resume-container">
-     <div class="header">
-       <h1>Shahid malik</h1><br>
-       <p><a class="DecorationNone" href=https://https://github.com/SHAHID-glitch target="_blank">https://github.com/SHAHID-glitch</a> | <a class="DecorationNone" href="#"> 9917760469</a> | <a href=mailto:sahidmalik9368@gmail.com class="DecorationNone" target="_blank">sahidmalik9368@gmail.com</a> <br> <div style="margin-top: 6px;">Haridwar (Uttarakhand)</div> </p>
-     </div>
+        .DecorationNone {
+            text-decoration: none;
+            color: #1d4780;
+        }
 
-     <div class="summary">
-       <h3>Summary</h3>
-       <p>A passionated AI developer with extensive experience in various machine learning models, Primarily i focus on building models from scratch rather than relying heavily on fine-tuning pre-trained models. All my projects, showcasing my skills and contributions, are available on GitHub & Kaggle.</p>
-     </div>
+        .fontLight {
+            color: #5e5d5d;
+        }
 
-     <div class="experience">
-       <h3>Work Experience</h3>
-         <div class="experience-item">
-         <ul class="circle-list">
-           <li><h4 class="spacebetween">ONLEI TECHNOLOGIES  | Data scientist  <span>Jan-2025 to feb-2025</span></h4></li>
-           Learn to visualise data patterns
-         </ul>
-       </div>
-<div class="experience-item">
-         <ul class="circle-list">
-           <li><h4 class="spacebetween">Codsoft | Python Engineer  <span>Mar-2025 to apr-2025</span></h4></li>
-           Learn  python of data science 
-         </ul>
-       </div>
-<div class="experience-item">
-         <ul class="circle-list">
-           <li><h4 class="spacebetween">Open ai | Ai analyst  <span>May-2025 to jun-2025</span></h4></li>
-           Learning generative ai
-         </ul>
-       </div>
-     </div>
+        .square-list {
+            list-style-type: square;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/NishantkSingh0/Resume-Builder/main/public/N.png">
+</head>
 
-     <div class="education-section">
-       <h3>Education</h3>
-         <div class="education-item">
-         <ul class="square-list">
-           <li><h4 class="spacebetween">Bachelor in computer applications <span>2023 - 2026</span></h4></li>
-           <p>Haridwar University  | SGPA: 7</p>
-         </ul>
-       </div>
-<div class="education-item">
-         <ul class="square-list">
-           <li><h4 class="spacebetween">Primary, secondary<span>2021-2023</span></h4></li>
-           <p>Vidya Vikassnee intern college | SGPA: 7</p>
-         </ul>
-       </div>
-     </div>
+<body>
+    <div class="sc-jbAkgO zFJhr">
+        <div class="resume-container" id="capture-content">
+            <div class="header">
+                <h1><b>Shahid Malik</b></h1><br>
+                <p><a class="DecorationNone" href="https://github.com/Shahid-Malik" target="_blank" rel="noreferrer">Shahid-Malik</a> | <a class="DecorationNone" href="#"> 9368890469</a> | <a href="mailto:Shahid.talk@gmail.com" class="DecorationNone" target="_blank" rel="noreferrer">Shahid.talk@gmail.com</a> <br>
+                <div style="margin-top: 6px;">Haridwar (Uttrakhand)</div>
+                </p>
+            </div>
+            <div class="summary">
+                <h3><b>Summary</b></h3>
+                <p>A detail-oriented Data Scientist from Haridwar University, specializing in TensorFlow, PyTorch, Transformers, Keras, LLM's, C/C++, Java, JavaScript, React and a proven track record of delivering 30+ impactful projects that drive business growth. Proficient in Hindi Enlish. with a strong focus on TeamWork, Problem-Solving, Leadership, Critical thinking, Communication, Creativity, bringing innovation, efficiency, and a solution-driven mindset to every project.</p>
+            </div>
+            <div class="experience">
+                <h3><b>Work Experience</b></h3>
+                <div class="experience-item">
+                    <ul class="circle-list">
+                        <li>
+                            <h4 class="spacebetween">Onlei tech | Data scientist <span>Dec-2024 to Mar-2025</span></h4>
+                        </li>
+                        <div>Learn to visualize patterns from data using matplotlib and Built several DL models</div>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <ul class="circle-list">
+                        <li>
+                            <h4 class="spacebetween">Microsoft | Python engineer <span>May-2024 to Jul-2024</span></h4>
+                        </li>
+                        <div>Learn to use python in NLP tasks to take advantages of LLM</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="education-section">
+                <h3><b>Education</b></h3>
+                <div class="education-item">
+                    <ul class="square-list">
+                        <li>
+                            <h4 class="spacebetween">Batchelor in Computer application<span>2023 - 2026</span></h4>
+                        </li>
+                        <p>Haridwar University | SGPA: 8</p>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <ul class="square-list">
+                        <li>
+                            <h4 class="spacebetween">Primary/Secondary<span>2021 - 2023</span></h4>
+                        </li>
+                        <p>Vidya Mandir Sec-5 (Haridwar) | SGPA: 8</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="projects">
+                <h3><b>Projects</b></h3>
+                <div class="project-item">
+                    <ul>
+                        <li>
+                            <h4 class="spacebetween">Transformer based translation model</h4>
+                        </li>
+                        <p>Tensorflow, Trasformer architecture, NumPy, WMT Translation dataset</p>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <ul>
+                        <li>
+                            <h4 class="spacebetween">Exam Proctoring system</h4>
+                        </li>
+                        <p>React, Flask, OpenCV, NumPy, Mediapipe, Pillow, WebSocket, ThreadPool</p>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <ul>
+                        <li>
+                            <h4 class="spacebetween">Persion bounding box detection</h4>
+                        </li>
+                        <p>OpenCV, Json, Tensorflow, Pandas, Matplotlib, NumPy</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="Certifications">
+                <h3><b>Certifications</b></h3>
+                <div class="flexConts Certificate-item">
+                    <div class="mar-30">Azure AI Engineer association<br>C/C++<br>DataScientist Internship<br>Intro To responsive AI<br>Bits &amp; byts of computer<br><a class="DecorationNone" href="#" target="_blank" rel="noreferrer">More Certificates</a></div>
+                    <div class="mar-30">--<br>--<br>--<br>--<br>--<br></div>
+                    <div class="mar-30">Microsoft<br>Cad Planet<br>Onlei Tech<br>SimpliLearn<br>Coursera<br></div>
+                    <div class="mar-30 fontLight">(2 month )<br>(2 Month)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br></div>
+                </div>
+            </div>
+            <div class="skills">
+                <h3><b>Skills</b></h3>
+                <p class="skills-item"><strong style="color: rgb(75, 77, 77);">Soft Skills: </strong>TeamWork, Problem-Solving, Leadership, Critical thinking, Communication, Creativity</p>
+                <p class="skills-item"><strong style="color: rgb(75, 77, 77);">Tech Skills: </strong><span>TensorFlow, PyTorch, Transformers, Keras, LLM's, C/C++, Java, JavaScript, React</span></p>
+            </div>
+        </div>
+    </div>
+</body>
 
-     <div class="projects">
-       <h3>Projects</h3>
-         <div class="project-item">
-         <ul>
-           <li><h4 class="spacebetween">Resume builder web application </h4></li>
-           <p>React, tailwind, deepseekR1, weasyprint</p>
-         </ul>
-       </div>
-<div class="project-item">
-         <ul>
-           <li><h4 class="spacebetween">Transformer based translation model</h4></li>
-           <p>Numpy, pandas, matplotlib, scit learn, tensorflow</p>
-         </ul>
-       </div>
-     </div>
-
-     <div class="Certifications">
-       <h3>Certifications</h3>
-       <div class="spacebetween Certificate-item">
-         <div>Python <br>Spoken tutorial  <br>The bites and Bytes of computer<br>Technical support fundamental <br>Power BI data mining<br><a class="DecorationNone" href="#" target="_blank">More Certificates</a></div>
-         <div>~<br>~<br>~<br>~<br>~<br></div>
-         <div>Hacker rank<br>IIT BOMBAY<br>Coursera<br>Coursera<br>Simplilern<br></div>
-       </div>
-     </div>
-
-     <div class="skills">
-       <h3>Skills</h3>
-       <p class="skills-item"><strong style="color: rgb(75, 77, 77);">Soft Skills: </strong>Teamwork, problem solving.</p>
-       <p class="skills-item"><strong>Tech Skills: </strong style="color: rgb(75, 77, 77);">Ai, ml, data science, Python, Data Handling </p>
-     </div>
-   </div>
-   </body>
-   </html>
-   
+</html>
