@@ -1,184 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <DOCTYPE html>
-    <html lang="en">
-    <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <style>
-           
-   body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #d6cece;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: auto;         /* (W/H) Ratio should be 0.7069 */
-   }
-   .resume {
-      width: 900px;           /* (W/H) Ratio should be 0.7069 */
-      /* height: 1131px; */
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designed by BRAVERS</title>
+    <style>
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #F1F5F9 !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
 
-   .title{
-      font-size: 24px;
-      font-weight: bold;
-      color: #474646;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #535351;
-      padding-bottom: 5px;
-   }
+            @page {
+                size: 950px 1300px;
+                margin: 0;
+            }
 
-   .contacts h1{
-      margin: 0%;
-   }
+            .resume {
+                width: 900px;
+                background: #F1F5F9;
+                border: 0px solid #ddd !important;
+                border-radius: 15px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        }
 
-   .NoneDecoration{
-      text-decoration: none;
-      color: rgb(1, 82, 187);
-      padding-left: 20px;
-   }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d6cece;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            /* (W/H) Ratio should be 0.7069 */
+        }
 
-   .TextGray{
-      color:#363636;
-      font-weight: bold;
-   }
+        .resume {
+            width: 900px;
+            /* (W/H) Ratio should be 0.7069 */
+            /* height: 1131px; */
+            background: #F1F5F9;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-   .subtitle,.item-title{
-      font-size: 18px;
-      font-weight: bold;
-      color: #474646;
-      margin-bottom: 5px;
-      margin-top: 15px;
-   }
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
 
-   .Conts{
-      margin-top: 25px;
-   }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #474646;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #535351;
+            padding-bottom: 5px;
+        }
 
-   .subcont{
-      display: flex;
-      /* justify-content: space-between; */
-   }
+        .contacts h1 {
+            font-size: 32px;
+            /* or whatever you like */
+            font-weight: bold;
+            color: #333;
+        }
 
-   .subcont .mid{
-      padding-right: 40px;
-   }
+        .NoneDecoration {
+            text-decoration: none;
+            color: rgb(1, 82, 187);
+            padding-left: 20px;
+        }
 
-   .contacts a{
-      text-decoration: none;
-      color: black;
-   }
+        .TextGray {
+            color: #363636;
+            font-weight: bold;
+        }
 
-   .signature{
-      font-family: 'Dancing Script', cursive;
-      font-size: 18px;
-      font-weight:500;
-      display: flex;
-      justify-content: end;
-      margin-right: 50px;
-   }
+        .TextLight {
+            color: #4e4e4e;
+        }
 
-   .SpaceBetween{
-      display: flex;
-      margin-bottom: 2px;
-      justify-content: space-between;
-      padding: 0 20px 0 20px;
-   }
-    
-         </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-       <title>Designed by BRAVERS</title>
-       <link rel="icon" href="https://raw.githubusercontent.com/NishantkSingh0/Resume-Builder/main/public/N.png">
+        .subtitle,
+        .item-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #474646;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
 
-    </head>
-    <body>
-       <div class="resume">
-          <div class="contacts">
-             <h1>Shahid malik</h1>
-             <p>Haridwar (Uttarakhand) <br>9368863048 | <a href="mailto:"+sahidmalik9368@gmail.com target="_blank">sahidmalik9368@gmail.com</a> | <a href=https://github.com/SHAHID-glitch target="_blank"> https://github.com/SHAHID-glitch <a></p>
-          </div>
-          <div class="Conts">
-             <div class="title">Objectives:</div>
-             A passionated AI developer with extensive experience in various machine learning models, Primarily i focus on building models from scratch rather than relying heavily on fine-tuning pre-trained models. All my projects, showcasing my skills and contributions, are available on GitHub & Kaggle.
-          </div>
-          <div class="Conts">
-             <div class="title">Education:</div>
-                <div class="subtitle">Bachelor in computer applications </div>
-                Haridwar University  | 2023 - 2026 | SGPA: 7
-<div class="subtitle">Primary, secondary</div>
-                Vidya Vikassnee intern college | 2021-2023 | SGPA: 7
-          </div>
-          <div class="Conts">
-             <div class="title">Technical skills:</div>
-             <div class="subcont SpaceBetween">
-                <div class="left">Hard Skills <br>Soft Skills </div>
-                <div class="mid">~ <br>~ <br></div>
-                <div class="right">Ai, ml, data science, Python, Data Handling <br>Teamwork, problem solving. <br></div>
-             </div>
-          </div>
-          <div class="Conts">
-             <div class="title">Academic Projects:</div>
-             <ul>
-                
-   <div class="Ritem">
-         <li> <div class="item-title">Resume builder web application  </div>
-         <div> React, tailwind, deepseekR1, weasyprint </li>
-   </div>
+        .mll-3 {
+            margin-left: 0.75rem
+                /* 12px */
+            ;
+        }
 
+        .Conts {
+            margin-top: 25px;
+        }
 
-   <div class="Ritem">
-         <li> <div class="item-title">Transformer based translation model </div>
-         <div> Numpy, pandas, matplotlib, scit learn, tensorflow </li>
-   </div>
+        .subcont {
+            display: flex;
+            /* justify-content: space-between; */
+        }
 
-             </ul>
-          </div>
-          <div class="Conts">
-             <div class="title">Work Experience:</div>
-             <div class="internship TextGray SpaceBetween">
-                   <div class="left"><b>ONLEI TECHNOLOGIES </b></div>
-                   <div class="Right"><b>Jan-2025 to feb-2025</b></div>
+        .subcont .mid {
+            padding-right: 40px;
+        }
+
+        .flexConts {
+            display: flex;
+        }
+
+        .mar-30 {
+            margin: 0 30px 0 30px;
+        }
+
+        .contacts a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            justify-content: end;
+            margin-right: 50px;
+        }
+
+        .SpaceBetween {
+            display: flex;
+            margin-bottom: 2px;
+            justify-content: space-between;
+            padding: 0 20px 0 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/NishantkSingh0/Resume-Builder/main/public/N.png">
+</head>
+
+<body>
+    <div class="sc-gNZgCX gMXjoo">
+        <div class="resume" id="capture-content">
+            <div class="contacts">
+                <h1>Shahid Malik</h1>
+                <p>Haridwar (Uttrakhand) <br>9368890469 | <a href="mailto:Shahid.talk@gmail.com" target="_blank" rel="noreferrer">Shahid.talk@gmail.com</a> | <a href="https://github.com/Shahid-Malik" target="_blank" rel="noreferrer"> Shahid-Malik</a></p>
+            </div>
+            <div class="Conts">
+                <div class="title">Objectives:</div>A detail-oriented Data Scientist from Haridwar University, specializing in TensorFlow, PyTorch, Transformers, Keras, LLM's, C/C++, Java, JavaScript, React and a proven track record of delivering 30+ impactful projects that drive business growth. Proficient in Hindi Enlish. with a strong focus on TeamWork, Problem-Solving, Leadership, Critical thinking, Communication, Creativity, bringing innovation, efficiency, and a solution-driven mindset to every project.
+            </div>
+            <div class="Conts">
+                <div class="title">Education:</div>
+                <div>
+                    <div class="subtitle">Batchelor in Computer application</div>Haridwar University | 2023 - 2026 | SGPA: 8
                 </div>
-                <ul>
-                      <li>Learn to visualise data patterns</li>
-                </ul>
-<div class="internship TextGray SpaceBetween">
-                   <div class="left"><b>Codsoft</b></div>
-                   <div class="Right"><b>Mar-2025 to apr-2025</b></div>
+                <div>
+                    <div class="subtitle">Primary/Secondary</div>Vidya Mandir Sec-5 (Haridwar) | 2021 - 2023 | SGPA: 8
                 </div>
-                <ul>
-                      <li>Learn  python of data science </li>
-                </ul>
-<div class="internship TextGray SpaceBetween">
-                   <div class="left"><b>Open ai</b></div>
-                   <div class="Right"><b>May-2025 to jun-2025</b></div>
+            </div>
+            <div class="Conts">
+                <div class="title">Technical skills:</div>
+                <div class="subcont SpaceBetween">
+                    <div class="left"><strong style="color: rgb(75, 77, 77);">Tech Skills: </strong> <br><strong style="color: rgb(75, 77, 77);">Soft Skills: </strong></div>
+                    <div class="mid">--<br>--<br></div>
+                    <div class="right">TensorFlow, PyTorch, Transformers, Keras, LLM's, C/C++, Java, JavaScript, React<br>TeamWork, Problem-Solving, Leadership, Critical thinking, Communication, Creativity <br></div>
                 </div>
+            </div>
+            <div class="Conts">
+                <div class="title">Academic Projects:</div>
                 <ul>
-                      <li>Learning generative ai</li>
+                    <div class="Ritem">
+                        <li>
+                            <div class="item-title">Transformer based translation model</div>
+                            <div>Tensorflow, Trasformer architecture, NumPy, WMT Translation dataset</div>
+                        </li>
+                    </div>
+                    <div class="Ritem">
+                        <li>
+                            <div class="item-title">Exam Proctoring system</div>
+                            <div>React, Flask, OpenCV, NumPy, Mediapipe, Pillow, WebSocket, ThreadPool</div>
+                        </li>
+                    </div>
+                    <div class="Ritem">
+                        <li>
+                            <div class="item-title">Persion bounding box detection</div>
+                            <div>OpenCV, Json, Tensorflow, Pandas, Matplotlib, NumPy</div>
+                        </li>
+                    </div>
                 </ul>
-          </div>
-          <div class="Conts">
-             <div class="title">Certifications:</div>
-             <div class="subcont SpaceBetween">
-                <div class="left">Python <br>Spoken tutorial  <br>The bites and Bytes of computer<br>Technical support fundamental <br>Power BI data mining</div>
-                <div class="mid">~<br>~<br>~<br>~<br>~<br></div>
-                <div class="right">Hacker rank<br>IIT BOMBAY<br>Coursera<br>Coursera<br>Simplilern<br></div>
-             </div>
-             <a class="NoneDecoration" href="#" target="_blank">More Certificates</a>
-          </div>
-          <div class="Conts">
-             <div class="title">Declaration:</div>
-             I hereby declare that the above information is true to the best of my knowledge.
-          </div>
-          <p class="signature">Shahid malik</p>
-       </div>   
-    </body>
-    </html>
-    
+            </div>
+            <div class="Conts">
+                <div class="title">Work Experience:</div>
+                <div>
+                    <div class="internship TextGray SpaceBetween">
+                        <div class="left ">Onlei tech</div>
+                        <div class="Right">Dec-2024 to Mar-2025</div>
+                    </div>
+                    <ul>
+                        <li>Learn to visualize patterns from data using matplotlib and Built several DL models</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="internship TextGray SpaceBetween">
+                        <div class="left ">Microsoft</div>
+                        <div class="Right">May-2024 to Jul-2024</div>
+                    </div>
+                    <ul>
+                        <li>Learn to use python in NLP tasks to take advantages of LLM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Conts">
+                <div class="title">Certifications:</div>
+                <div class="flexConts subcont">
+                    <div class="mar-30">Azure AI Engineer association<br>C/C++<br>DataScientist Internship<br>Intro To responsive AI<br>Bits &amp; byts of computer</div>
+                    <div class="mar-30">--<br>--<br>--<br>--<br>--<br></div>
+                    <div class="mar-30">Microsoft<br>Cad Planet<br>Onlei Tech<br>SimpliLearn<br>Coursera<br></div>
+                    <div class="mar-30 TextLight">(2 month )<br>(2 Month)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br></div>
+                </div><a class="NoneDecoration mll-3" href="#" target="_blank" rel="noreferrer">More Certificates</a>
+            </div>
+            <div class="Conts">
+                <div class="title">Declaration:</div>I hereby declare that the above information is true to the best of my knowledge.
+            </div>
+            <p class="signature">Shahid Malik</p>
+        </div>
+    </div>
+</body>
+
+</html>
