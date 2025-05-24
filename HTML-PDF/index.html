@@ -1,120 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HTML/CSS to PDF Converter</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9fafb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+<script>
+  const fileInput = document.getElementById('fileInput');
+  const uploadBtn = document.getElementById('uploadBtn');
+  const statusDiv = document.getElementById('status');
+  const pdfLink = document.getElementById('pdfLink');
+
+  uploadBtn.addEventListener('click', async () => {
+    const file = fileInput.files[0];
+    if (!file || !file.name.endsWith('.html')) {
+      statusDiv.innerHTML = '<div class="error">Please upload a valid .html file.</div>';
+      return;
     }
 
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-    }
+    statusDiv.innerHTML = '<span class="loader"></span>Generating PDF...';
+    uploadBtn.disabled = true;
+    pdfLink.style.display = 'none';
 
-    h2 {
-      margin-bottom: 20px;
-    }
+    const reader = new FileReader();
 
-    input[type="file"] {
-      display: block;
-      margin: 0 auto 20px auto;
-      padding: 10px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:disabled {
-      background: #9ca3af;
-      cursor: not-allowed;
-    }
-
-    .loader {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #2563eb;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      animation: spin 1s linear infinite;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .error {
-      color: #dc2626;
-      margin-top: 15px;
-    }
-
-    .download-link {
-      display: block;
-      margin-top: 20px;
-      color: #2563eb;
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>HTML/CSS to PDF Converter</h2>
-    <input type="file" id="fileInput" accept=".html,.css"/>
-    <button id="uploadBtn">Generate PDF</button>
-    <div id="status"></div>
-    <a id="pdfLink" class="download-link" href="#" target="_blank" style="display: none;">Download PDF</a>
-  </div>
-
-  <script>
-    const fileInput = document.getElementById('fileInput');
-    const uploadBtn = document.getElementById('uploadBtn');
-    const statusDiv = document.getElementById('status');
-    const pdfLink = document.getElementById('pdfLink');
-
-    uploadBtn.addEventListener('click', async () => {
-      const file = fileInput.files[0];
-      if (!file) return;
-
-      statusDiv.innerHTML = '<span class="loader"></span>Generating PDF...';
-      uploadBtn.disabled = true;
-      pdfLink.style.display = 'none';
-
-      const formData = new FormData();
-      formData.append('file', file);
-
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minutes
+    reader.onload = async function (event) {
+      const htmlContent = event.target.result;
 
       try {
         const response = await fetch('https://html2pdfviabravers.onrender.com/generate-pdf', {
           method: 'POST',
-          body: formData,
-          signal: controller.signal,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ html: htmlContent }),
         });
-
-        clearTimeout(timeoutId);
 
         if (!response.ok) throw new Error('Failed to generate PDF.');
 
@@ -123,13 +36,20 @@
 
         statusDiv.innerHTML = '';
         pdfLink.href = pdfUrl;
+        pdfLink.download = 'resume.pdf';
         pdfLink.style.display = 'block';
       } catch (error) {
         statusDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
       } finally {
         uploadBtn.disabled = false;
       }
-    });
-  </script>
-</body>
-</html>
+    };
+
+    reader.onerror = () => {
+      statusDiv.innerHTML = `<div class="error">Error reading file.</div>`;
+      uploadBtn.disabled = false;
+    };
+
+    reader.readAsText(file);
+  });
+</script>
